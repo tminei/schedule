@@ -11,7 +11,7 @@ def start_message(message):
     bot.send_message(message.chat.id,
                      'Привет, я бот, который будет кидать тебе расписание занятий. Ну, конечно, если ты с 231 группы.')
     t.sleep(2)
-    bot.send_message(message.chat.id, 'Вот команды, которые я знаю:\n\nПары сегодня:\n/ls:\n\nПары завтра:\n/tom:\n\nВывод расписания по дням (текущая неделя):\n/mon \n/tue \n/wed \n/thu \n/fri\n\nМожно указать неделю, для вывода по дням\n/mon1 \n/tue2 \nи т.д.\n\nУзнать неделю:\n/week\n\nВремя начала-конца пар:\n/time\n\nКинуть монетку:\n/roll\n\nСправка: \n/help\n\nКупить автору кофе или чего покрепче:\n4402 7110 3617 3613\n5168 7573 8199 8535')
+    bot.send_message(message.chat.id, 'Вот команды, которые я знаю:\n\nПары сегодня:\n/ls\n\nПары завтра:\n/tom\n\nВывод расписания по дням (текущая неделя):\n/mon \n/tue \n/wed \n/thu \n/fri\n\nМожно указать неделю, для вывода по дням\n/mon1 \n/tue2 \nи т.д.\n\nУзнать неделю:\n/week\n\nВремя начала-конца пар:\n/time\n\nКинуть монетку:\n/roll\n\nСправка: \n/help\n\nКупить автору кофе или чего покрепче:\n4402 7110 3617 3613\n5168 7573 8199 8535')
     # bot.send_message(message.chat.id, 'Пары сегодня:')
     # bot.send_message(message.chat.id, '/ls:')
     # bot.send_message(message.chat.id, 'Пары завтра:')
@@ -295,6 +295,6 @@ def ls(message):
 
 @bot.message_handler(commands=['time'])
 def ls(message):
-    bot.send_message(message.chat.id, '1 пара 08.00 - 09.20\n2 пара 09.40 - 11.00\n3 пара 11.20 - 12.40\n4 пара 13.00 - 14.20\n5 пара 14.40 - 16.00\n6 пара 16.20 - 17:40\n7 пара 18.00 - 19.20\n8 пара 19.40 - 21.00')
+    bot.send_message(message.chat.id, '1 пара 08:00 - 09:20\n2 пара 09:40 - 11:00\n3 пара 11:20 - 12:40\n4 пара 13:00 - 14:20\n5 пара 14:40 - 16:00\n6 пара 16:20 - 17:40\n7 пара 18:00 - 19:20\n8 пара 19:40 - 21:00')
 
 bot.polling()
