@@ -138,13 +138,16 @@ def sendNextPair():
         print("NoNext")
         # pair = schd[1]
     else:
-        txtmsgaall("Некст пара: ")
-        if int(pair[4]) == 1:
-            toSend = str(pair[0]) + ". " + str(pair[1]) + ", ведет " + str(pair[2]) + " в " + str(pair[3])
-        else:
-            toSend = str(pair[0]) + ". " + str(pair[1]) + ", ведет " + str(pair[2]) + " в " + str(
-                pair[3] + ". Это лекция.")
-        txtmsgaall(toSend)
+        try:
+            txtmsgaall("Некст пара: ")
+            if int(pair[4]) == 1:
+                toSend = str(pair[0]) + ". " + str(pair[1]) + ", ведет " + str(pair[2]) + " в " + str(pair[3])
+            else:
+                toSend = str(pair[0]) + ". " + str(pair[1]) + ", ведет " + str(pair[2]) + " в " + str(
+                    pair[3] + ". Это лекция.")
+            txtmsgaall(toSend)
+        except:
+            print("Че-то пошло не так...")
 
 
 if __name__ == '__main__':
@@ -170,7 +173,7 @@ if __name__ == '__main__':
     # schedule.every().day.at("10:30").do()
     # getNextPair()
 
-    txtmsg("Я родился", "274625481")
+    txtmsg("Я родился", "")
     print("start")
 
     while True:
